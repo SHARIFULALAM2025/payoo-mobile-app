@@ -11,7 +11,7 @@ document.getElementById('log-in').addEventListener('click', function (e) {
     console.log(numberValueConvert,passwordValueConvert);
 
     if ((phoneNumber === numberValueConvert) && (phonePassword === passwordValueConvert)) {
-        window.location.href = "/payoo-mobile-app/app.html"
+        window.location.href = "payoo-mobile-app/app.html"
     } else {
         alert("invalid number or password")
 
