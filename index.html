@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>mobile app</title>
+</head>
+
+<body class="bg-[#f4f5f7] h-[100vh] flex justify-center items-center flex-col">
+    <div class="h-[100px] w-[300px] bg-[url('./assets/bg.png')] bg-cover  flex justify-center items-center "><img
+            src="./assets/Group.png" alt="" class=""></div>
+    <form class="bg-[#ffffff] p-12 rounded-xl">
+        <div class="mt-5">
+            <label for="" class="font-semibold mt-5">mobile number :</label><br>
+            <input id="mobile_number1" type="number" placeholder="Enter Your Number"
+                class="input rounded-3xl bg-[#f4f5f7] mt-3" />
+        </div>
+
+        <div class="mt-5">
+            <label for="" class="font-semibold 5">4 Digit pin :</label><br>
+            <input id="mobile-password" type="number" placeholder="Enter 4 Digit pin"
+                class="input rounded-3xl bg-[#f4f5f7] mt-3" />
+        </div>
+        <div class="mt-5">
+            <button type="button" id="log-in" class="btn bg-[#0874f2] w-full text-white rounded-3xl">Login</button>
+
+        </div>
+    </form>
+
+    <script src="./money/index.js"></script>
+</body>
+
+</html>
