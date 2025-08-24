@@ -1,21 +1,34 @@
 const addMony = document.getElementById('add-Mony');
-const myPersonalPin = 4321;
+const myPersonalPin = 1234;
 
 addMony.addEventListener('click', function (e) {
     e.preventDefault();
     let bankAccount = document.getElementById('Bank_Account_Number').value;
-    const addAmount = parseInt(document.getElementById('Amount_add').value);
-    const pinNumber = parseInt(document.getElementById('pin_Number').value);
+    const myTaka = parseInt(document.getElementById('taka').innerText);
+//reuseable function
+    function addAmount_1(id) {
+        const data = document.getElementById(id);
+        const dataValue = data.value;
+        const result = parseInt(dataValue);
+        return result;
+    }
+//function call
+    const addAmount = addAmount_1('Amount_add');
+    const pinNumber = addAmount_1('pin_Number')
     const allBank = document.getElementById('bank').value;
 
-    const myTaka = parseInt(document.getElementById('taka').innerText);
-    if (bankAccount.length == 11 && pinNumber === myPersonalPin) {
-        const newTaka = addAmount + myTaka;
-        document.getElementById('taka').innerText = newTaka;
-
-    } else {
-        alert('please validate pin or bankAccount number');
+    if (bankAccount.length < 11) {
+        alert("invalid bank account number");
+        return;
     }
+    if (myPersonalPin != pinNumber) {
+        alert('invalid pin number');
+        return ;
+    }
+
+    const newTaka = addAmount + myTaka;
+    document.getElementById('taka').innerText = newTaka;
+
     console.log(addAmount, bankAccount, allBank, pinNumber, addingTaka);
 })
 
@@ -59,6 +72,6 @@ document.getElementById('Transactions').addEventListener('click', function () {
 
     document.getElementById('child_6').style.display = 'block';
     document.getElementById('child_5').style.display = 'none';
-    
+
 
 })
