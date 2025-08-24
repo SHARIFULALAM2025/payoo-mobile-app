@@ -21,71 +21,44 @@ addMony.addEventListener('click', function (e) {
 
 // form section
 
-// const fastChild = document.getElementById('child_1');
-// const secondChild = document.getElementById('child_2');
-// const thirdChild = document.getElementById('child_3');
-// const fourChild = document.getElementById('child_4');
-// const fiveChild = document.getElementById('child_5');
-// const sixChild = document.getElementById('child_6');
-
 document.getElementById('AddMony').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('child_1').style.display = 'block';
-    document.getElementById('child_6').style.display = 'none';
-    document.getElementById('child_5').style.display = 'none';
-    document.getElementById('child_4').style.display = 'none';
-    document.getElementById('child_3').style.display = 'none';
     document.getElementById('child_2').style.display = 'none';
 
 })
 document.getElementById('cash_1').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('child_2').style.display = 'block';
-    document.getElementById('child_6').style.display = 'none';
-    document.getElementById('child_5').style.display = 'none';
-    document.getElementById('child_4').style.display = 'none';
-    document.getElementById('child_3').style.display = 'none';
     document.getElementById('child_1').style.display = 'none';
+
 
 
 })
 document.getElementById('Transfer_Money').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('child_3').style.display = 'block';
-    document.getElementById('child_1').style.display = 'none';
     document.getElementById('child_2').style.display = 'none';
-    document.getElementById('child_6').style.display = 'none';
-    document.getElementById('child_5').style.display = 'none';
-    document.getElementById('child_4').style.display = 'none';
+
 
 })
 document.getElementById('Get_Bonus').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('child_4').style.display = 'block';
     document.getElementById('child_3').style.display = 'none';
-    document.getElementById('child_1').style.display = 'none';
-    document.getElementById('child_2').style.display = 'none';
-    document.getElementById('child_6').style.display = 'none';
-    document.getElementById('child_5').style.display = 'none';
 
 })
 document.getElementById('Pay_Bill').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('child_5').style.display = 'block';
     document.getElementById('child_4').style.display = 'none';
-    document.getElementById('child_3').style.display = 'none';
-    document.getElementById('child_1').style.display = 'none';
-    document.getElementById('child_2').style.display = 'none';
-    document.getElementById('child_6').style.display = 'none';
+
 
 })
 document.getElementById('Transactions').addEventListener('click', function () {
 
     document.getElementById('child_6').style.display = 'block';
     document.getElementById('child_5').style.display = 'none';
-    document.getElementById('child_4').style.display = 'none';
-    document.getElementById('child_3').style.display = 'none';
-    document.getElementById('child_1').style.display = 'none';
-    document.getElementById('child_2').style.display = 'none';
+    
 
 })
