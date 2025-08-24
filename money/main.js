@@ -3,33 +3,59 @@ const myPersonalPin = 1234;
 
 addMony.addEventListener('click', function (e) {
     e.preventDefault();
-    let bankAccount = document.getElementById('Bank_Account_Number').value;
-    const myTaka = parseInt(document.getElementById('taka').innerText);
-//reuseable function
+
+
+    //reuseable function
     function addAmount_1(id) {
         const data = document.getElementById(id);
         const dataValue = data.value;
         const result = parseInt(dataValue);
         return result;
     }
-//function call
+    //add value reuseable function
+    function addValue(val) {
+        const data1 = document.getElementById(val);
+        const dataValue1 = data1.value;
+        return dataValue1;
+
+
+    }
+    //inner text reuseable function
+    function AddInnerText(text) {
+        const addText = document.getElementById(text);
+        const addInner = addText.innerText;
+        const intAddText = parseInt(addInner);
+        return intAddText;
+    }
+    //set inner text
+    function setInnerText(value) {
+        const setBallance = document.getElementById('taka');
+        setBallance.innerText = value;
+
+    }
+
+
+    //function call
     const addAmount = addAmount_1('Amount_add');
-    const pinNumber = addAmount_1('pin_Number')
-    const allBank = document.getElementById('bank').value;
+    const pinNumber = addAmount_1('pin_Number');
+    const allBank = addValue('bank');
+    const bankAccount = addValue('Bank_Account_Number');
+    const myTaka = AddInnerText('taka');
+
 
     if (bankAccount.length < 11) {
         alert("invalid bank account number");
         return;
     }
-    if (myPersonalPin != pinNumber) {
+    if (pinNumber !== myPersonalPin) {
         alert('invalid pin number');
-        return ;
+        return;
     }
-
     const newTaka = addAmount + myTaka;
-    document.getElementById('taka').innerText = newTaka;
+    setInnerText(newTaka);
 
-    console.log(addAmount, bankAccount, allBank, pinNumber, addingTaka);
+
+
 })
 
 // form section
