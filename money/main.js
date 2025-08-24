@@ -58,46 +58,79 @@ addMony.addEventListener('click', function (e) {
 
 })
 
-// form section
+// form section reuseable function
+
+function reuseable_function(bun) {
+    const addManyButtons = document.getElementsByClassName('child');
+    for (const recentButton of addManyButtons) {
+        recentButton.style.display = 'none';
+    };
+    document.getElementById(bun).style.display = 'block';
+}
 
 document.getElementById('AddMony').addEventListener('click', function (e) {
     e.preventDefault();
-    document.getElementById('child_1').style.display = 'block';
-    document.getElementById('child_2').style.display = 'none';
+    reuseable_function('fast_button');
+    const formBtns = document.getElementsByClassName('form-btn');
+    for (const element of formBtns) {
+        element.classList.remove('border-blue-500', 'bg-[#0874f20d]');
+    };
 
+    document.getElementById('AddMony').classList.remove('bg-[#ffffff]');
+    document.getElementById('AddMony').classList.add('border-blue-500', 'bg-[#0874f20d]');
 })
 document.getElementById('cash_1').addEventListener('click', function (e) {
     e.preventDefault();
-    document.getElementById('child_2').style.display = 'block';
-    document.getElementById('child_1').style.display = 'none';
+    reuseable_function('second_button');
+    const formBtns = document.getElementsByClassName('form-btn');
+    for (const element of formBtns) {
+        element.classList.remove('border-blue-500', 'bg-[#0874f20d]');
+    };
 
-
-
+    document.getElementById('cash_1').classList.remove('bg-[#ffffff]');
+    document.getElementById('cash_1').classList.add('border-blue-500', 'bg-[#0874f20d]');
 })
 document.getElementById('Transfer_Money').addEventListener('click', function (e) {
     e.preventDefault();
-    document.getElementById('child_3').style.display = 'block';
-    document.getElementById('child_2').style.display = 'none';
+    reuseable_function('third_button');
+    const formBtns = document.getElementsByClassName('form-btn');
+    for (const element of formBtns) {
+        element.classList.remove('border-blue-500', 'bg-[#0874f20d]');
+    };
 
+    document.getElementById('Transfer_Money').classList.remove('bg-[#ffffff]');
+    document.getElementById('Transfer_Money').classList.add('border-blue-500', 'bg-[#0874f20d]');
 
 })
 document.getElementById('Get_Bonus').addEventListener('click', function (e) {
     e.preventDefault();
-    document.getElementById('child_4').style.display = 'block';
-    document.getElementById('child_3').style.display = 'none';
+    reuseable_function('four_button');
+    const formBtns = document.getElementsByClassName('form-btn');
+    for (const element of formBtns) {
+        element.classList.remove('border-blue-500', 'bg-[#0874f20d]');
+    };
 
+    document.getElementById('Get_Bonus').classList.remove('bg-[#ffffff]');
+    document.getElementById('Get_Bonus').classList.add('border-blue-500', 'bg-[#0874f20d]');
 })
 document.getElementById('Pay_Bill').addEventListener('click', function (e) {
     e.preventDefault();
-    document.getElementById('child_5').style.display = 'block';
-    document.getElementById('child_4').style.display = 'none';
+    reuseable_function('five_button');
+    const formBtns = document.getElementsByClassName('form-btn');
+    for (const element of formBtns) {
+        element.classList.remove('border-blue-500', 'bg-[#0874f20d]');
+    };
 
-
+    document.getElementById('Pay_Bill').classList.remove('bg-[#ffffff]');
+    document.getElementById('Pay_Bill').classList.add('border-blue-500', 'bg-[#0874f20d]');
 })
 document.getElementById('Transactions').addEventListener('click', function () {
+    reuseable_function('six_button');
+    const formBtns = document.getElementsByClassName('form-btn');
+    for (const element of formBtns) {
+        element.classList.remove('border-blue-500', 'bg-[#0874f20d]');
+    };
 
-    document.getElementById('child_6').style.display = 'block';
-    document.getElementById('child_5').style.display = 'none';
-
-
+    document.getElementById('Transactions').classList.remove('bg-[#ffffff]');
+    document.getElementById('Transactions').classList.add('border-blue-500', 'bg-[#0874f20d]');
 })
